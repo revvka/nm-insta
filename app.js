@@ -53,6 +53,8 @@ function getURL(){
 function clickLike(){
   nightmare
     .click('body > div:nth-child(9) > div > div._g1ax7 > div > article > div._es1du._rgrbt > section._jveic._rhgel > a')
+    .wait((Math.random() * 10000) + 1000)
+    .click('body > div:nth-child(9) > div > div._g1ax7 > div > article > header > span > button')
     .wait((Math.random() * 10000) + 10000)
     .then(function(){
       getURL()
@@ -61,4 +63,3 @@ function clickLike(){
 
 console.log('Listening on PORT: ' + PORT);
 app.listen(PORT);
-

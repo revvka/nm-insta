@@ -1,5 +1,8 @@
 var Nightmare = require('nightmare');       
 var nightmare = Nightmare({ show: true });
+var express = require('express');
+var app = express();
+var PORT = 3002;
 
 
 //========================================
@@ -55,3 +58,7 @@ function clickLike(){
       getURL()
     })
 }
+
+console.log('Listening on PORT: ' + PORT);
+app.listen(PORT);
+

@@ -50,8 +50,7 @@ function getURL(){
 function clickLike(){
   nightmare
     .click('body > div:nth-child(9) > div > div._g1ax7 > div > article > div._es1du._rgrbt > section._jveic._rhgel > a')
-    .wait(5000)
-    .then(function(){
+    .wait((Math.random() * 10000) + 10000)    .then(function(){
       getURL()
     })
 }
